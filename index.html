@@ -6,538 +6,277 @@
   <title>NJM Mobile Detailing LLC</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', Arial, sans-serif;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #050505;
+      background: #0b0b0b;
       color: #ffffff;
       line-height: 1.6;
-      letter-spacing: .5px;
-    }
-
-    p, .booking-item, footer {
-      font-family: Arial, sans-serif;
-      letter-spacing: 0;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.92);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 34px;
-      z-index: 10;
-      border-bottom: 2px solid #b11217;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .logo-mark {
-      width: 70px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 1.4rem;
-      font-weight: 900;
-      background: #b11217;
-      border-radius: 4px;
-      box-shadow: 0 0 22px rgba(177, 18, 23, 0.45);
-    }
-
-    .logo-text {
-      line-height: 1.05;
-      text-transform: uppercase;
-      font-size: 1.05rem;
-    }
-
-    .logo-text span {
-      color: #d71920;
-      display: block;
-      font-size: 1.35rem;
-    }
-
-    .nav-links a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-
-    .nav-links a:hover {
-      color: #d71920;
     }
 
     header {
-      background: radial-gradient(circle at 70% 45%, rgba(177,18,23,.35), transparent 28%), linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)), url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      min-height: 95vh;
+      background: #000000;
+      padding: 18px 8%;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 120px 55px 50px;
-      border-bottom: 3px solid #b11217;
+      border-bottom: 2px solid #d60000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d60000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d60000;
     }
 
     .hero {
-      max-width: 720px;
+      min-height: 90vh;
+      background: linear-gradient(135deg, rgba(0,0,0,0.92), rgba(35,35,35,0.92)),
+                  radial-gradient(circle at center, #d60000 0%, #1a0000 35%, #000000 100%);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
     }
 
-    .hero-logo {
-      margin-bottom: 24px;
-      line-height: 1;
-    }
-
-    .hero-logo .top {
-      font-size: 3.3rem;
-      color: #d71920;
-      text-transform: uppercase;
-      text-shadow: 0 0 18px rgba(0,0,0,.8);
-    }
-
-    .hero-logo .bottom {
-      font-size: 2rem;
-      color: #ffffff;
-      letter-spacing: 12px;
-      text-transform: uppercase;
-      margin-left: 3px;
-    }
-
-    .spray-line {
-      width: 190px;
-      height: 4px;
-      background: #d71920;
-      margin: 18px 0 22px;
-      box-shadow: 0 0 18px rgba(215,25,32,.8);
+    .hero-content {
+      max-width: 850px;
     }
 
     .hero h1 {
-      font-size: 4.2rem;
+      font-size: 54px;
+      color: #ffffff;
       margin-bottom: 15px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      line-height: .95;
     }
 
     .hero span {
-      color: #d71920;
+      color: #d60000;
     }
 
     .hero p {
-      font-size: 1.15rem;
-      max-width: 620px;
-      margin: 0 0 25px;
-      color: #f2f2f2;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .badge {
-      display: inline-block;
-      color: #d71920;
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-    }
-
-    .trust-row {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      margin: 20px 0 18px;
-    }
-
-    .trust-item {
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: .92rem;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
-
-    .trust-item strong {
-      color: #d71920;
-      margin-right: 6px;
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #e8e8e8;
     }
 
     .btn {
       display: inline-block;
-      background: linear-gradient(135deg, #d71920, #8f0f13);
-      color: #ffffff;
-      padding: 15px 30px;
+      background: #d60000;
+      color: #000000;
+      padding: 15px 34px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 4px;
-      margin: 8px 10px 8px 0;
-      transition: 0.2s;
-      border: 2px solid #d71920;
-      text-transform: uppercase;
-      box-shadow: 0 0 18px rgba(177,18,23,.35);
+      font-size: 18px;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #f1252d;
-      transform: translateY(-2px);
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      box-shadow: none;
-    }
-
-    .btn.secondary:hover {
-      border-color: #d71920;
-      color: #d71920;
-      background: transparent;
+      background: #ffffff;
+      transform: scale(1.04);
     }
 
     section {
-      padding: 70px 35px;
-      max-width: 1250px;
-      margin: auto;
+      padding: 70px 8%;
     }
 
-    h2 {
+    .section-title {
       text-align: center;
-      font-size: 2.55rem;
+      font-size: 36px;
       margin-bottom: 35px;
-      text-transform: uppercase;
-      line-height: 1.05;
+      color: #d60000;
     }
 
-    h2 small {
-      display: block;
-      color: #d71920;
-      font-size: 1rem;
-      margin-bottom: 8px;
-      letter-spacing: 2px;
-    }
-
-    h2 span {
-      color: #d71920;
-    }
-
-    .services, .why, .steps {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: linear-gradient(135deg, #0c0c0c, #151515);
+      background: #151515;
       padding: 28px;
-      border-radius: 10px;
+      border-radius: 14px;
       border: 1px solid #333;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: #d71920;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
     }
 
     .card h3 {
-      color: #ffffff;
+      color: #d60000;
       margin-bottom: 12px;
-      text-transform: uppercase;
-      font-size: 1.55rem;
+      font-size: 24px;
     }
 
-    .card p {
-      color: #d6d6d6;
-    }
-
-    .price {
-      font-size: 2.3rem;
-      font-weight: bold;
-      margin: 16px 0;
-      color: #d71920;
-    }
-
-    .booking-box, .about {
-      background: linear-gradient(135deg, #090909, #171717);
-      border-radius: 12px;
-      padding: 42px;
-      text-align: center;
-      border: 1px solid #3a3a3a;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.45);
-    }
-
-    .booking-box p, .about p {
-      color: #dddddd;
-      max-width: 820px;
-      margin: 0 auto 18px;
-      font-size: 1.05rem;
-    }
-
-    .booking-grid {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 16px;
-      margin-top: 26px;
-      text-align: left;
+      gap: 18px;
     }
 
-    .booking-item {
-      background: #070707;
-      border: 1px solid #333;
-      padding: 18px;
-      border-radius: 8px;
-    }
-
-    .booking-item strong {
-      color: #d71920;
-    }
-
-    .service-area {
+    .gallery-card {
+      height: 260px;
+      border-radius: 12px;
+      border: 2px solid #d60000;
+      background: linear-gradient(135deg, #140000, #2b0000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      color: #ddd;
-      max-width: 760px;
+      padding: 20px;
+      color: #ffffff;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    }
+
+    .gallery-card span {
+      color: #d60000;
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .booking-box {
+      background: linear-gradient(135deg, #0d0d0d, #250000);
+      border: 2px solid #d60000;
+      text-align: center;
+      border-radius: 18px;
+      padding: 45px 25px;
+      max-width: 850px;
       margin: auto;
-      font-size: 1.1rem;
+    }
+
+    .booking-box h2 {
+      color: #d60000;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .booking-box p {
+      margin-bottom: 25px;
+      color: #e8e8e8;
+      font-size: 18px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #000000;
+      border-top: 2px solid #d60000;
     }
 
     footer {
-      background: #000000;
       text-align: center;
-      padding: 36px 20px;
-      color: #aaa;
-      border-top: 2px solid #b11217;
+      padding: 22px;
+      background: #000000;
+      color: #aaaaaa;
+      font-size: 14px;
     }
 
-    footer a {
-      color: #d71920;
-      text-decoration: none;
-    }
-
-    @media (max-width: 760px) {
-      nav {
-        position: static;
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px;
-      }
-
-      .nav-links a {
-        margin: 0 8px;
-        font-size: .9rem;
-      }
-
+    @media (max-width: 700px) {
       header {
-        padding: 55px 24px;
-        text-align: center;
-        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
       }
 
       .hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .hero-logo .top {
-        font-size: 2.3rem;
-      }
-
-      .hero-logo .bottom {
-        font-size: 1.35rem;
-        letter-spacing: 7px;
-      }
-
-      .spray-line {
-        margin: 16px auto 20px;
+        font-size: 38px;
       }
 
       .hero p {
-        font-size: .98rem;
-      }
-
-      .trust-row {
-        justify-content: center;
+        font-size: 17px;
       }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <div class="logo">
-      <div class="logo-mark">NJM</div>
-      <div class="logo-text"><span>Mobile</span>Detailing</div>
-    </div>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#booking">Book</a>
-      <a href="tel:8125609544">Call</a>
-    </div>
-  </nav>
-
   <header>
-    <div class="hero">
-      <div class="hero-logo">
-        <div class="top">NJM Mobile</div>
-        <div class="bottom">Detailing</div>
-      </div>
-      <div class="badge">Professional • Reliable • Fully Insured</div>
-      <div class="spray-line"></div>
-      <h1>Premium <span>Mobile</span><br>Detailing</h1>
-      <p>We come to you. High quality detailing that makes your vehicle look its best.</p>
-      <div class="trust-row">
-        <div class="trust-item"><strong>✓</strong> Fully Insured</div>
-        <div class="trust-item"><strong>✓</strong> Mobile Service</div>
-        <div class="trust-item"><strong>✓</strong> Premium Results</div>
-      </div>
-      <a href="sms:8125609544?&body=Hey%20NJM%20Mobile%20Detailing%2C%20I%20want%20to%20book%20a%20detail.%20My%20vehicle%20is%20a%20" class="btn">Book by Text</a>
-      <a href="tel:8125609544" class="btn secondary">Call 812-560-9544</a>
-    </div>
+    <div class="logo">NJM Mobile Detailing LLC</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#gallery">Photos</a>
+      <a href="#booking">Book Now</a>
+    </nav>
   </header>
 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Clean Car. Fresh Look. <span>Done Right.</span></h1>
+      <p>Mobile detailing that comes to you. Interior, exterior, and full detail packages built to make your vehicle look its best.</p>
+      <a class="btn" href="https://book.squareup.com/appointments/e3h8giy8l6jnij/location/LD64QPQYNFQWG/services" target="_blank">Book Your Detail</a>
+    </div>
+  </section>
+
   <section id="services">
-    <h2><small>Our Services</small>Quality Detailing, <span>Done Right</span></h2>
+    <h2 class="section-title">Our Services</h2>
     <div class="services">
       <div class="card">
-        <h3>Basic Exterior Wash</h3>
-        <p>Foam wash, hand wash, wheel cleaning, tire shine, and exterior rinse for a clean finish.</p>
-        <div class="price">Starting at $50</div>
-      </div>
-      <div class="card">
         <h3>Interior Detail</h3>
-        <p>Deep interior cleaning with vacuuming, wipe down, cup holders, panels, mats, and interior refresh.</p>
-        <div class="price">Starting at $150</div>
+        <p>Deep interior cleaning for seats, carpets, mats, cup holders, vents, and hard-to-reach areas using top-notch tools.</p>
       </div>
+
       <div class="card">
-        <h3>Full Detail</h3>
-        <p>Complete interior and exterior package for customers who want the whole vehicle cleaned inside and out.</p>
-        <div class="price">Starting at $175</div>
+        <h3>Exterior Detail</h3>
+        <p>Full exterior wash, wheels, tires, windows, and trim cleaned to give your vehicle a sharp, fresh look.</p>
       </div>
+
       <div class="card">
-        <h3>Ceramic Protection</h3>
-        <p>Paint protection option that helps add shine and protection after the vehicle is properly cleaned and prepped.</p>
-        <div class="price">Ask for quote</div>
+        <h3>Full Interior & Exterior</h3>
+        <p>A complete inside-and-out detail that leaves your vehicle clean, refreshed, and ready to show off.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2 class="section-title">Before & After Photos</h2>
+    <div class="gallery">
+      <div class="gallery-card"><div><span>Before & After</span>Interior Detail Results</div></div>
+      <div class="gallery-card"><div><span>Exterior Wash</span>Clean Wheels, Paint, and Tires</div></div>
+      <div class="gallery-card"><div><span>Deep Clean</span>Seats, Carpets, Mats, and Vents</div></div>
+      <div class="gallery-card"><div><span>Finished Look</span>Fresh, Clean, and Ready To Go</div></div>
     </div>
   </section>
 
   <section id="booking">
     <div class="booking-box">
-      <h2>Ready to <span>Book?</span></h2>
-      <p>Text is the easiest way to book. Tap the button below and send your vehicle type, service wanted, location, and best day/time.</p>
-      <a href="sms:8125609544?&body=Hey%20NJM%20Mobile%20Detailing%2C%20I%20want%20to%20book%20a%20detail.%0A%0AVehicle%3A%20%0AService%3A%20%0ALocation%3A%20%0ABest%20day%2Ftime%3A%20" class="btn">Text 812-560-9544 to Book</a>
-      <a href="mailto:nolanmclane9@gmail.com?subject=Detail%20Booking%20Request&body=Vehicle%3A%0AService%3A%0ALocation%3A%0ABest%20day%2Ftime%3A" class="btn secondary">Email to Book</a>
-
-      <div class="booking-grid">
-        <div class="booking-item"><strong>Step 1:</strong><br>Send your vehicle year, make, and model.</div>
-        <div class="booking-item"><strong>Step 2:</strong><br>Pick interior detail, full detail, exterior wash, or ceramic protection.</div>
-        <div class="booking-item"><strong>Step 3:</strong><br>Send your location and the best time for your appointment.</div>
-      </div>
+      <h2>Ready To Book?</h2>
+      <p>Choose your service, pick a time, and book your appointment through our Square booking page.</p>
+      <a class="btn" href="https://book.squareup.com/appointments/e3h8giy8l6jnij/location/LD64QPQYNFQWG/services" target="_blank">Book Now</a>
     </div>
   </section>
 
-  <section>
-    <div class="about">
-      <h2>About <span>NJM</span></h2>
-      <p>NJM Mobile Detailing LLC is a mobile car detailing business focused on convenient, reliable, and professional service. We come to you, bring the equipment, and treat every vehicle with care. Fully insured for customer peace of mind.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Why Book <span>With Us?</span></h2>
-    <div class="why">
-      <div class="card">
-        <h3>Mobile Convenience</h3>
-        <p>No waiting at a shop. We come to your home, driveway, or workplace.</p>
-      </div>
-      <div class="card">
-        <h3>Fully Insured</h3>
-        <p>Your vehicle is handled by a real business with proper coverage.</p>
-      </div>
-      <div class="card">
-        <h3>Clean Results</h3>
-        <p>Simple, honest detailing that makes your vehicle look better and feel cleaner.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2><small>Real Customer</small>Results <span>Gallery</span></h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
-      <div class="card">
-        <img src="909FD3BD-5179-4963-B005-5F4DC366E2DD.jpeg" alt="Interior Detail" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Interior Detail</h3>
-        <p>Deep cleaned interior with refreshed carpets, seats, and trim.</p>
-      </div>
-
-      <div class="card">
-        <img src="57A39423-5F20-4EF4-ACE2-7AA026D066C8.jpeg" alt="Back Seat Detail" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Seat & Carpet Refresh</h3>
-        <p>Clean leather finish with restored carpet appearance and detailed surfaces.</p>
-      </div>
-
-      <div class="card">
-        <img src="7F3205D4-9AF8-4DE9-8D57-EF4C4176DEC8.jpeg" alt="Mercedes Interior" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Luxury Interior Cleaning</h3>
-        <p>Premium interior cleaning and leather treatment for a fresh factory look.</p>
-      </div>
-
-      <div class="card">
-        <img src="F4F6722B-3832-4E01-AC96-E4B7265CDF48.jpeg" alt="Red SUV Exterior" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Exterior Wash & Shine</h3>
-        <p>Complete exterior detail with enhanced gloss and clean wheel finish.</p>
-      </div>
-
-      <div class="card">
-        <img src="487DFE75-D822-4FAF-B9AC-80C5389A4E14.jpeg" alt="Jeep Detail" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Full Vehicle Detail</h3>
-        <p>Detailed exterior cleaning with tire shine and restored appearance.</p>
-      </div>
-
-      <div class="card">
-        <img src="266DCFF8-E494-4E95-8DE1-E6055E649AFC.jpeg" alt="Mercedes Exterior" style="width:100%;border-radius:8px;margin-bottom:14px;">
-        <h3>Premium Wash</h3>
-        <p>Cleaned and protected exterior finish for a sharp, polished look.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Service <span>Area</span></h2>
-    <p class="service-area">Serving Southeast Indiana and the Cincinnati area. Mobile appointments available depending on distance and schedule.</p>
+  <section class="contact">
+    <h2 class="section-title">NJM Mobile Detailing LLC</h2>
+    <p>Professional mobile detailing with quality tools, clean results, and attention to detail.</p>
   </section>
 
   <footer>
-    <p><strong>NJM Mobile Detailing LLC</strong></p>
-    <p>Fully Insured Mobile Detailing</p>
-    <p>Phone: <a href="tel:8125609544">812-560-9544</a> | Email: <a href="mailto:nolanmclane9@gmail.com">nolanmclane9@gmail.com</a></p>
-    <p>© 2026 NJM Mobile Detailing LLC. All rights reserved.</p>
+    <p>© 2026 NJM Mobile Detailing LLC. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
-https://book.squareup.com/appointments/e3h8giy8l6jnij/location/LD64QPQYNFQWG/services
+
